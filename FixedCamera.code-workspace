@@ -30,7 +30,7 @@
 					"FixedCamera",
 					"Win64",
 					"Debug",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -47,7 +47,7 @@
 					"FixedCamera",
 					"Win64",
 					"Debug",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -67,7 +67,7 @@
 					"FixedCamera",
 					"Win64",
 					"Debug",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -84,7 +84,7 @@
 					"FixedCamera",
 					"Win64",
 					"DebugGame",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -101,7 +101,7 @@
 					"FixedCamera",
 					"Win64",
 					"DebugGame",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -121,7 +121,7 @@
 					"FixedCamera",
 					"Win64",
 					"DebugGame",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -138,7 +138,7 @@
 					"FixedCamera",
 					"Win64",
 					"Development",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -155,7 +155,7 @@
 					"FixedCamera",
 					"Win64",
 					"Development",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -175,7 +175,7 @@
 					"FixedCamera",
 					"Win64",
 					"Development",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -192,7 +192,7 @@
 					"FixedCamera",
 					"Win64",
 					"Test",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -209,7 +209,7 @@
 					"FixedCamera",
 					"Win64",
 					"Test",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -229,7 +229,7 @@
 					"FixedCamera",
 					"Win64",
 					"Test",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -246,7 +246,7 @@
 					"FixedCamera",
 					"Win64",
 					"Shipping",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -263,7 +263,7 @@
 					"FixedCamera",
 					"Win64",
 					"Shipping",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -283,7 +283,7 @@
 					"FixedCamera",
 					"Win64",
 					"Shipping",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -300,7 +300,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"Debug",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -317,7 +317,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"Debug",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -337,7 +337,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"Debug",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -354,7 +354,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"DebugGame",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -371,7 +371,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"DebugGame",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -391,7 +391,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"DebugGame",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -408,7 +408,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"Development",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -425,7 +425,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"Development",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -445,7 +445,7 @@
 					"FixedCameraEditor",
 					"Win64",
 					"Development",
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -462,7 +462,7 @@
 			{
 				"name": "Launch FixedCamera (Debug)",
 				"request": "launch",
-				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
 				"preLaunchTask": "FixedCamera Win64 Debug Build",
 				"args": [
 				],
@@ -478,7 +478,7 @@
 			{
 				"name": "Launch FixedCamera (DebugGame)",
 				"request": "launch",
-				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
 				"preLaunchTask": "FixedCamera Win64 DebugGame Build",
 				"args": [
 				],
@@ -494,7 +494,7 @@
 			{
 				"name": "Launch FixedCamera (Development)",
 				"request": "launch",
-				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\Binaries\\Win64\\UnrealGame.exe",
+				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\Binaries\\Win64\\UnrealGame.exe",
 				"preLaunchTask": "FixedCamera Win64 Development Build",
 				"args": [
 				],
@@ -510,7 +510,7 @@
 			{
 				"name": "Launch FixedCamera (Test)",
 				"request": "launch",
-				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
 				"preLaunchTask": "FixedCamera Win64 Test Build",
 				"args": [
 				],
@@ -526,7 +526,7 @@
 			{
 				"name": "Launch FixedCamera (Shipping)",
 				"request": "launch",
-				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"program": "C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
 				"preLaunchTask": "FixedCamera Win64 Shipping Build",
 				"args": [
 				],
@@ -545,7 +545,7 @@
 				"program": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
 				"preLaunchTask": "FixedCameraEditor Win64 Debug Build",
 				"args": [
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject"
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject"
 				],
 				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
 				"stopAtEntry": false,
@@ -562,7 +562,7 @@
 				"program": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
 				"preLaunchTask": "FixedCameraEditor Win64 DebugGame Build",
 				"args": [
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject"
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject"
 				],
 				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
 				"stopAtEntry": false,
@@ -579,7 +579,7 @@
 				"program": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
 				"preLaunchTask": "FixedCameraEditor Win64 Development Build",
 				"args": [
-					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject"
+					"C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject"
 				],
 				"cwd": "C:\\Program Files\\Epic Games\\UE_5.3",
 				"stopAtEntry": false,
@@ -599,7 +599,7 @@
 				"args": [
 					"-projectfiles",
 					"-vscode",
-					"-project=C:\\Users\\celso\\Documents\\Projetos Pessoais\\Systems\\FixedCamera\\FixedCamera.uproject",
+					"-project=C:\\Users\\celso\\Documents\\Projetos Pessoais\\LidioRepository\\Templates\\FixedCamera\\FixedCamera.uproject",
 					"-game",
 					"-engine",
 					"-dotnet"

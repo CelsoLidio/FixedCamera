@@ -4,20 +4,38 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "MyPlayer.generated.h"
+#include "InputActionValue.h"
+#include "Components/InputComponent.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubSystems.h"
+
+
+#include "FixedCameraPlayer.generated.h"
+
+
+class UInputMappingContext;
+class UInputAction;
+
 
 UCLASS()
-class AMyPlayer : public ACharacter
+class AFixedCameraPlayer : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AMyPlayer();
+	AFixedCameraPlayer();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditAnywhere, Category=InputPlayer)
+	UInputMappingContext* mapInputPlayer;
+
+	UPROPERTY(EditAnywhere, Category = InputPlayer)
+	UInputAction* movementAction;
+
 
 public:	
 	// Called every frame
@@ -25,5 +43,8 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
+	void MovePlayer(const FInputActionValue& value);
 
 };
