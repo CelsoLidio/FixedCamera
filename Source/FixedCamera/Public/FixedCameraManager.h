@@ -3,35 +3,54 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Engine/GameInstance.h"
+#include "GameFramework/Actor.h"
+#include "Components/StaticMeshComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "../PrintStrings.h"
 #include "FixedCameraManager.generated.h"
+
 
 /**
  * 
  */
 UCLASS()
-class FIXEDCAMERA_API UFixedCameraManager : public UObject
+class FIXEDCAMERA_API AFixedCameraManager : public AActor
 {
 	GENERATED_BODY()
 	
 public:
 	
-
-	static UFixedCameraManager* GetInstance();
-
+	AFixedCameraManager();
 	
 
-	void ChangeCamera();
 
-	void AddCamera(AActor* newCamera);
+protected:
+	virtual void BeginPlay() override;
 
-private:
+
+public:
 	
-	UFixedCameraManager();
+	
+	virtual void Tick(float DeltaTime) override;
 
-	static UFixedCameraManager* instanceManager;
 
+	UPROPERTY(EditAnywhere)
 	TArray<AActor*> allCameras;
 
-	
+
+	static void AddCamera(AActor* newCamera);
+
+	static void ChangeCamera();
+
+private:
+
+	//static AFixedCameraManager* instanceManager;
+
+	AFixedCameraManager* managerCamActor;
+
+	USceneComponent* sceneRoot;
+
+	static AFixedCameraManager* GetCameraManager();
+
+
 };

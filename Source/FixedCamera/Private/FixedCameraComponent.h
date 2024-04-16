@@ -18,18 +18,19 @@ class UFixedCameraComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UFixedCameraComponent();
-
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	APawn* playerRef;
+	virtual void BeginDestroy() override;
 
-	TArray<UFixedCameraComponent*> allCameras;
+
+	APawn* playerRef;
 	
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+
+
 };

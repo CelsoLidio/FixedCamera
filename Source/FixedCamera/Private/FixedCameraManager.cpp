@@ -3,43 +3,121 @@
 
 #include "FixedCameraManager.h"
 
-UFixedCameraManager* UFixedCameraManager::instanceManager = nullptr;
 
-UFixedCameraManager::UFixedCameraManager()
+AFixedCameraManager::AFixedCameraManager()
 {
-	instanceManager = this;
+	PrimaryActorTick.bCanEverTick = true;
+
+	sceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneRoot"));
+	RootComponent = sceneRoot;
+
 }
 
 
-UFixedCameraManager* UFixedCameraManager::GetInstance()
+
+void AFixedCameraManager::BeginPlay()
 {
-	if (!instanceManager)
+	Super::BeginPlay();
+
+}
+
+
+void AFixedCameraManager::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+}
+
+
+
+void AFixedCameraManager::ChangeCamera()
+{
+	UWorld* world = GEngine->GameViewport->GetWorld();
+
+	AFixedCameraManager* managerCam = GetCameraManager();
+
+	auto* playerPawn = UGameplayStatics::GetPlayerPawn(world, 0);
+
+
+	if (managerCam->allCameras.IsEmpty())
 	{
-		instanceManager = NewObject<UFixedCameraManager>();
-		instanceManager->AddToRoot();
+		return;
 	}
 
-	return instanceManager;
-}
+	AActor* closerCam = nullptr;
 
-void UFixedCameraManager::ChangeCamera()
-{
+	float minorDistCam = FVector::Distance(playerPawn->GetActorLocation(), managerCam->allCameras[0]->GetActorLocation());
 
-	for(int eachCamera = 0; eachCamera< allCameras.Num(); eachCamera++)
+	
+	for(int eachCamera = 0; eachCamera< managerCam->allCameras.Num(); eachCamera++)
 	{
-		AActor* currCamera = allCameras[eachCamera];
+		AActor* currCamera = Cast<AActor>(managerCam->allCameras[eachCamera]);
 		
+		float distCams = FVector::Distance(playerPawn->GetActorLocation(), currCamera->GetActorLocation());
 
-		//GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Emerald, FString(*currCamera->GetActorNameOrLabel()));
+
+		if (distCams <= minorDistCam)
+		{
+			closerCam = currCamera;
+		}
+		
 	}
 
-
+	if (IsValid(closerCam))
+	{
+		UGameplayStatics::GetPlayerController(world, 0)->SetViewTarget(closerCam);
+		printf("camera name = %s", *closerCam->GetActorNameOrLabel());
+	}
+	else
+	{
+		print("Closer Camera not found");
+	}
+	
 }
 
-void UFixedCameraManager::AddCamera(AActor* newCamera)
+
+
+
+void AFixedCameraManager::AddCamera(AActor* newCamera)
 {
-	allCameras.Add(newCamera);
+
+	AFixedCameraManager* auxManager = NewObject<AFixedCameraManager>();
+
+	AFixedCameraManager* managerCam = GetCameraManager();
+
+	if (!IsValid(managerCam))
+	{
+		print("Manager Camera is NULL");
+		return;
+	}
+
+	//printf("%s", *managerCam->GetActorNameOrLabel());
+
+	managerCam->allCameras.Add(newCamera);
 
 }
 
+
+AFixedCameraManager* AFixedCameraManager::GetCameraManager()
+{
+	UWorld* world = GEngine->GameViewport->GetWorld();
+
+
+	AFixedCameraManager* managerRef;
+	TArray<AActor*> foundActors;
+
+	UGameplayStatics::GetAllActorsOfClass(world, AFixedCameraManager::StaticClass(), foundActors);
+
+	if (foundActors.Num() <= 0)
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.SpawnCollisionHandlingOverride;
+		managerRef = world->SpawnActor<AFixedCameraManager>(AFixedCameraManager::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+	}
+	else
+	{
+		managerRef = Cast<AFixedCameraManager>(foundActors[0]);
+	}
+
+	return managerRef;
+}
 
