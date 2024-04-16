@@ -47,7 +47,22 @@ void UFixedCameraComponent::OnComponentDestroyed(bool bDestroyingHierarchy)
 void UFixedCameraComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	//printf("nome camera = %s",*GetOwner()->GetActorNameOrLabel());
 	
+	FHitResult hitResult;
+
+	FVector startPos = GetOwner()->GetActorLocation();
+
+	FVector endPos = startPos + GetOwner()->GetActorForwardVector() * 500;
+
+	FCollisionQueryParams paramsCollision;
+	paramsCollision.AddIgnoredActor(GetOwner());
+
+
+	if (GetWorld()->LineTraceSingleByChannel(hitResult, startPos, endPos, ECollisionChannel::ECC_Pawn,paramsCollision))
+	{
+		printf("%s", *hitResult.GetActor()->GetActorNameOrLabel());
+	}
+
+	DrawDebugLine(GetWorld(), startPos, endPos, FColor::Red, true, 2.0f, 0.0f, 5.0f);
+
 }
