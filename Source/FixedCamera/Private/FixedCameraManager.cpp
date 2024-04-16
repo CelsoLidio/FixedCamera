@@ -31,7 +31,17 @@ void AFixedCameraManager::Tick(float DeltaTime)
 
 void AFixedCameraManager::ChangeCamera()
 {
+	if (!IsValid(GEngine->GameViewport))
+	{
+		return;
+	}
+
 	UWorld* world = GEngine->GameViewport->GetWorld();
+
+	
+
+	auto auxManagerCam = NewObject<AFixedCameraManager>();
+
 
 	AFixedCameraManager* managerCam = GetCameraManager();
 
@@ -48,13 +58,21 @@ void AFixedCameraManager::ChangeCamera()
 	float minorDistCam = FVector::Distance(playerPawn->GetActorLocation(), managerCam->allCameras[0]->GetActorLocation());
 
 	
-	for(int eachCamera = 0; eachCamera< managerCam->allCameras.Num(); eachCamera++)
+	for(auto currCamera : managerCam->allCameras)
 	{
-		AActor* currCamera = Cast<AActor>(managerCam->allCameras[eachCamera]);
+		if (!IsValid(currCamera))
+		{
+			managerCam->allCameras.Remove(currCamera);
+			continue;
+		}
+
+		auxManagerCam->SetTickComponentByTag(currCamera, "FixedCameraComponent", false);
 		
+
 		float distCams = FVector::Distance(playerPawn->GetActorLocation(), currCamera->GetActorLocation());
 
-
+		printf("Distancia = %f", distCams);
+		
 		if (distCams <= minorDistCam)
 		{
 			closerCam = currCamera;
@@ -64,8 +82,8 @@ void AFixedCameraManager::ChangeCamera()
 
 	if (IsValid(closerCam))
 	{
+		auxManagerCam->SetTickComponentByTag(closerCam, "FixedCameraComponent", true);
 		UGameplayStatics::GetPlayerController(world, 0)->SetViewTarget(closerCam);
-		printf("camera name = %s", *closerCam->GetActorNameOrLabel());
 	}
 	else
 	{
@@ -121,3 +139,14 @@ AFixedCameraManager* AFixedCameraManager::GetCameraManager()
 	return managerRef;
 }
 
+
+
+void AFixedCameraManager::SetTickComponentByTag(AActor* actorRef, FName tagComponent, bool isEnabled)
+{
+	auto* compActor = actorRef->FindComponentByTag<UActorComponent>(tagComponent);
+
+	if (IsValid(compActor))
+	{
+		compActor->SetComponentTickEnabled(isEnabled);
+	}
+}

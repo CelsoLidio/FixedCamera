@@ -3,15 +3,18 @@
 UFixedCameraComponent::UFixedCameraComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
-	
+
 }
 
 // Called when the game starts
 void UFixedCameraComponent::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	ComponentTags.Add("FixedCameraComponent");
 
 	AFixedCameraManager::AddCamera(GetOwner());
+
 
 
 	if (GetWorld()->GetFirstPlayerController()->GetPawn())
@@ -26,10 +29,17 @@ void UFixedCameraComponent::BeginPlay()
 
 }
 
-void UFixedCameraComponent::BeginDestroy()
+
+void UFixedCameraComponent::OnComponentDestroyed(bool bDestroyingHierarchy)
 {
-	Super::BeginDestroy();
+	Super::OnComponentDestroyed(bDestroyingHierarchy);
+
+	if (GetWorld())
+	{
+		AFixedCameraManager::ChangeCamera();
+	}
 }
+
 
 
 
@@ -38,5 +48,6 @@ void UFixedCameraComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	//printf("nome camera = %s",*GetOwner()->GetActorNameOrLabel());
 	
 }

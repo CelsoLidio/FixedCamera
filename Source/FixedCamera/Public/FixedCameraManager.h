@@ -52,5 +52,6 @@ private:
 
 	static AFixedCameraManager* GetCameraManager();
 
+	void SetTickComponentByTag(AActor* actorRef, FName tagComponent, bool isEnabled);
 
 };
