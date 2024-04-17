@@ -24,6 +24,7 @@ void AFixedCameraPlayer::BeginPlay()
 	}
 	
 	playerRotMove = Controller->GetViewTarget()->GetActorRotation();
+	movementVector = FVector2D::ZeroVector;
 }
 
 // Called every frame
@@ -51,11 +52,19 @@ void AFixedCameraPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 void AFixedCameraPlayer::MovePlayer(const FInputActionValue& value)
 {
 
-	const FVector2D movementVector = value.Get<FVector2D>();
+	//const FVector2D movementVector = value.Get<FVector2D>();
 
 	
 	//GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Emerald, "Input movimento = " + movementVector.ToString());
 	
+	if (movementVector != value.Get<FVector2D>())
+	{
+		movementVector = value.Get<FVector2D>();
+		playerRotMove = Controller->GetViewTarget()->GetActorRotation();
+	}
+
+	
+
 
 	const FRotator rotationPlayer = playerRotMove;
 	const FRotator YawRotation(0.f, rotationPlayer.Yaw, 0.f);

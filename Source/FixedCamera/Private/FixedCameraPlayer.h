@@ -54,5 +54,6 @@ private:
 	UInputAction* movementAction;
 
 	FRotator playerRotMove;
+	FVector2D movementVector;
 
 };
