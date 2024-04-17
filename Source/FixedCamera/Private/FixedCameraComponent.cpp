@@ -3,7 +3,7 @@
 UFixedCameraComponent::UFixedCameraComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
-
+	
 }
 
 // Called when the game starts
@@ -48,11 +48,15 @@ void UFixedCameraComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	
+	
+
+	AFixedCameraManager::ChangeCamera();
+	/*
 	FHitResult hitResult;
 
 	FVector startPos = GetOwner()->GetActorLocation();
 
-	FVector endPos = startPos + GetOwner()->GetActorForwardVector() * 500;
+	FVector endPos = startPos + GetOwner()->GetActorForwardVector() * 50000;
 
 	FCollisionQueryParams paramsCollision;
 	paramsCollision.AddIgnoredActor(GetOwner());
@@ -64,5 +68,5 @@ void UFixedCameraComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 	}
 
 	DrawDebugLine(GetWorld(), startPos, endPos, FColor::Red, true, 2.0f, 0.0f, 5.0f);
-
+	*/
 }

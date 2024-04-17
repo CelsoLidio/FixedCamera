@@ -30,11 +30,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, Category=InputPlayer)
-	UInputMappingContext* mapInputPlayer;
 
-	UPROPERTY(EditAnywhere, Category = InputPlayer)
-	UInputAction* movementAction;
 
 
 public:	
@@ -46,5 +42,17 @@ public:
 
 
 	void MovePlayer(const FInputActionValue& value);
+
+	void RegisterDirPlayer(const FInputActionValue& value);
+
+private:
+
+	UPROPERTY(EditAnywhere, Category = InputPlayer)
+	UInputMappingContext* mapInputPlayer;
+
+	UPROPERTY(EditAnywhere, Category = InputPlayer)
+	UInputAction* movementAction;
+
+	FRotator playerRotMove;
 
 };

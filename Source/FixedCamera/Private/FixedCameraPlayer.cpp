@@ -23,6 +23,7 @@ void AFixedCameraPlayer::BeginPlay()
 		}
 	}
 	
+	playerRotMove = Controller->GetViewTarget()->GetActorRotation();
 }
 
 // Called every frame
@@ -40,6 +41,10 @@ void AFixedCameraPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	if (UEnhancedInputComponent* enhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
 		enhancedInputComponent->BindAction(movementAction, ETriggerEvent::Triggered, this, &AFixedCameraPlayer::MovePlayer);
+
+		enhancedInputComponent->BindAction(movementAction, ETriggerEvent::Started, this, &AFixedCameraPlayer::RegisterDirPlayer);
+		enhancedInputComponent->BindAction(movementAction, ETriggerEvent::Completed, this, &AFixedCameraPlayer::RegisterDirPlayer);
+
 	}
 }
 
@@ -51,7 +56,8 @@ void AFixedCameraPlayer::MovePlayer(const FInputActionValue& value)
 	
 	//GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Emerald, "Input movimento = " + movementVector.ToString());
 	
-	const FRotator rotationPlayer = Controller->GetViewTarget()->GetActorRotation();
+
+	const FRotator rotationPlayer = playerRotMove;
 	const FRotator YawRotation(0.f, rotationPlayer.Yaw, 0.f);
 
 	const FVector forwardDir = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
@@ -69,6 +75,12 @@ void AFixedCameraPlayer::MovePlayer(const FInputActionValue& value)
 	AddMovementInput(rightDir, movementVector.X);*/
 
 
+
+}
+
+void AFixedCameraPlayer::RegisterDirPlayer(const FInputActionValue& value)
+{
+	playerRotMove = Controller->GetViewTarget()->GetActorRotation();
 
 }
 

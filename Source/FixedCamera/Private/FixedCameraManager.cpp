@@ -68,10 +68,9 @@ void AFixedCameraManager::ChangeCamera()
 
 		auxManagerCam->SetTickComponentByTag(currCamera, "FixedCameraComponent", false);
 		
+		float distCams = FVector::Dist(playerPawn->GetActorLocation(), currCamera->GetActorLocation());
 
-		float distCams = FVector::Distance(playerPawn->GetActorLocation(), currCamera->GetActorLocation());
-
-		printf("Distancia = %f", distCams);
+		//printf("Distancia = %f", distCams);
 		
 		if (distCams <= minorDistCam)
 		{
@@ -83,7 +82,7 @@ void AFixedCameraManager::ChangeCamera()
 	if (IsValid(closerCam))
 	{
 		auxManagerCam->SetTickComponentByTag(closerCam, "FixedCameraComponent", true);
-		UGameplayStatics::GetPlayerController(world, 0)->SetViewTarget(closerCam);
+		UGameplayStatics::GetPlayerController(world, 0)->SetViewTargetWithBlend(closerCam,0.2f,EViewTargetBlendFunction::VTBlend_Cubic);
 	}
 	else
 	{
